@@ -9,6 +9,11 @@
     border-radius: 6px;
     margin: 5px;
 }
+.topCard:hover{
+background-color:#D3D3D3 ;
+transition: 1s ease-in-out;
+color:navy;
+}
 
 .description{
     margin-top: 16%;
