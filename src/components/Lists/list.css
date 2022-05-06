@@ -1,0 +1,52 @@
+.mainList {
+  width: 88%;
+  /* margin: auto; */
+  background-color: #D1D9E1;
+  height: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  word-break: break-word;
+  padding: 10px;
+  border-radius: 10px;
+  padding: 9px;
+  margin: 9px;
+}
+.listTopHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+    margin-bottom: 11%;
+}
+
+.defaultInputs {
+  background-color: white;
+  padding: 12px;
+  margin: 6px;
+  border-radius: 8px;
+}
+
+.commonInput{
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+}
+.inputDefault1{
+  width: 60%;
+  margin-bottom: 8px;
+}
+.inputDefault2{
+  width: 100%;
+  font-size: 17px
+}
+
+.addCard{
+  color: white;
+    background-color: black;
+    border-radius: 4px;
+    font-weight: 700;
+    padding: 3px;
+    margin: 6px;
+}
+
+

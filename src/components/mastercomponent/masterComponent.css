@@ -1,0 +1,29 @@
+
+.header{
+    width: auto;
+    margin: auto;
+    background-color: lightgray;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding: 7px;
+    position: sticky;
+    top: 0;
+}
+.listDiv{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 3rem;
+}
+
+
+
+@media only screen and (max-width: 600px){
+  .listDiv{
+    grid-template-columns:1fr;
+
+  }
+}
