@@ -37,9 +37,9 @@
   }
 
 
-@media only screen and (max-width: 600px){
-  .listDiv{
-    grid-template-columns:1fr;
-
+  @media only screen and (max-width: 600px){
+    .mainList{
+      width: 100%;
+       
+    }
   }
-}
