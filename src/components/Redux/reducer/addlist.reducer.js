@@ -1,3 +1,4 @@
+import { uniq } from "lodash-es";
 import { get, pullAt } from "lodash-es";
 import { getLocalArray, setLocalArray } from "../../config/storage";
 
@@ -64,9 +65,9 @@ const addList = (state = initial, action) => {
     case "DELETE_LIST": {
       const { payload } = action;
       let { inputTitle, inputDesc, listArray, indexT } = state;
-      const filteredSchema = pullAt(listArray, [payload]);
-      console.log(listArray);
-      return { ...state, listArray: listArray, inputList: "" };
+      pullAt(listArray, [payload]);
+      setLocalArray('listArray',listArray)
+      return { ...state, listArray: uniq(listArray), inputList: "" };
     }
 
 
@@ -75,12 +76,10 @@ const addList = (state = initial, action) => {
       let { inputTitle, indexCard, listArray, indexT } = state;
       // const filteredSchema = pullAt(listArray, [payload]);
 
-      listArray[indexCard]?.cardArray.filter((item,index)=>{
-        return payload!==index
-      });
-      console.log("kkk",listArray)
-     
-      return { ...state, listArray:[...listArray], inputList: "" };
+      const cardArray=listArray[indexCard]?.cardArray;
+      const filteredArray= pullAt(cardArray,[payload])    
+      listArray[indexCard].cardArray=filteredArray;
+      return { ...state, listArray:uniq(listArray), inputList: "" };
     }
 
     case "SET_LIST_INDEX":{
