@@ -20,6 +20,8 @@ function Card({ inputDesc, inputTitle, cardIndex,listIndex }) {
               dispatch(globalIndexCard(cardIndex));
               dispatch(deleteCard());
             }}
+            style={{cursor:"pointer"}}
+
           >
             <GrClose />
           </span>

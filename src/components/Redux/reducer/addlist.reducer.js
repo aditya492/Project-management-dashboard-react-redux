@@ -74,11 +74,10 @@ const addList = (state = initial, action) => {
     case 'DELETE_CARD':{
        const { payload } = action;
       let { inputTitle, indexCard, listArray, indexT } = state;
-      // const filteredSchema = pullAt(listArray, [payload]);
-
-      const cardArray=listArray[indexCard]?.cardArray;
-      const filteredArray= pullAt(cardArray,[payload])    
-      listArray[indexCard].cardArray=filteredArray;
+      const cardArray=listArray[indexT]?.cardArray;
+      const filteredArray= pullAt(cardArray,[indexCard])    
+      const vv=listArray[indexT].cardArray=cardArray;
+      setLocalArray('listArray',listArray)
       return { ...state, listArray:uniq(listArray), inputList: "" };
     }
 

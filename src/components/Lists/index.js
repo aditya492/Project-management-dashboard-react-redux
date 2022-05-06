@@ -82,13 +82,13 @@ export default function List({ listTitle, index }) {
 
   return (
     <>
-      <div key={index} className="mainList">
         <div className="listTopHead">
           <span>{listTitle}</span>
           <span
             onClick={() => {
               dispatch(deleteList(index));
             }}
+          style={{cursor:"pointer"}}
           >
             <GrClose />
           </span>
@@ -117,9 +117,6 @@ export default function List({ listTitle, index }) {
           Add Card
         </button>
         <ToastContainer position="bottom-right" />
-
-      </div>
-
     </>
   );
 }
